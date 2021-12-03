@@ -1,5 +1,11 @@
 const practiceCoding = () => new Promise((resolve, reject) => {
-  switch (process.argv[2]) {
+  const userInput = process.argv[2];
+  
+  if (userInput) {
+    console.log('Current user activity:', userInput);
+  }
+  
+  switch (userInput) {
     case 'coding': {
       return resolve('We are coding in promises!');
     }
@@ -17,11 +23,10 @@ const init = async () => {
   try {
     const result = await practiceCoding();
     console.log('Current user activity:', result);
-    process.exit(0);
   } catch (err) {
     console.error(err);
-    process.exit(9);
   }
+  process.exit();
 };
 
 init();
