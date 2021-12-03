@@ -59,6 +59,9 @@ const practiceCoding = () => new Promise((resolve, reject) => {
   }
 });
 ```
+
+## Additional Changes
+
 This was enough to fix the bug. However, I saw an opportunity to improve upon the sequence of events and to add utility. This was achieved by creating an init function to take advantage of async/await and get out of the callback flow. Also, I added parameters to each function to add purity for potential reuse.
 
 ```js
