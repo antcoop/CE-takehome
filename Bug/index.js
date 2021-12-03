@@ -1,9 +1,7 @@
-const practiceCoding = () => new Promise((resolve, reject) => {
-  const userInput = process.argv[2];
-  
-  if (userInput) {
-    console.log('Current user activity:', userInput);
-  }
+const userInput = process.argv[2];
+
+const practiceCoding = (input) => new Promise((resolve, reject) => {
+  if (input) console.log('Current user activity:', input);
   
   switch (userInput) {
     case 'coding': {
@@ -19,9 +17,9 @@ const practiceCoding = () => new Promise((resolve, reject) => {
   }
 });
 
-const init = async () => {
+const init = async (input) => {
   try {
-    const result = await practiceCoding();
+    const result = await practiceCoding(input);
     console.log('Current user activity:', result);
   } catch (err) {
     console.error(err);
@@ -29,4 +27,4 @@ const init = async () => {
   process.exit();
 };
 
-init();
+init(userInput);
