@@ -43,7 +43,7 @@ const practiceCoding = () => new Promise((resolve, reject) => {
 ```
 From here, I noticed an opportunity to handle the generic error from withub this `Promise` as well. Allowing me to keep everything in one place so it's easier to identify if we choose to add functionality later on. This presented three conditional checks which prompted me to use a `switch` statement.
 ```js
-const practiceCoding = (userInput) => new Promise((resolve, reject) => {
+const practiceCoding = () => new Promise((resolve, reject) => {
   if (userInput) console.log('Current user activity:', userInput);
   switch (userInput) {
     case 'coding': {
