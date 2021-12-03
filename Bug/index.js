@@ -3,7 +3,7 @@ const userInput = process.argv[2];
 const practiceCoding = (input) => new Promise((resolve, reject) => {
   if (input) console.log('Current user activity:', input);
   
-  switch (userInput) {
+  switch (input) {
     case 'coding': {
       return resolve('We are coding in promises!');
     }
