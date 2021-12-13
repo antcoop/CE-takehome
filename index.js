@@ -31,7 +31,7 @@ const practiceCoding = (input) => new Promise((resolve, reject) => {
 const init = async (input) => {
   try {
     const result = await practiceCoding(input);
-    console.log('Current user activity:', result);
+    console.log(result);
   } catch (err) {
     console.error(err);
   }
